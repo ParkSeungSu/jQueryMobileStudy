@@ -10,6 +10,35 @@
     <title>popup</title>
 </head>
 <body>
-    
+     <div data-role="page" id="pageone">
+         <div data-role="header">
+             <div>
+                 <h1>Hello</h1>
+             </div>
+         </div>
+         <div data-role="main" class="ui-contents">
+            <a href="#mypopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show popup</a>
+
+            <div data-role="popup" id="mypopup" class="ui-contents">
+                <a href="#" data-rel="back" 
+                data-role="button"
+                data-theme="a" 
+                data-icon="delete"
+                data-iconpos="notext"
+                class="ui-btn-right ui-link ui-btn ui-btn-a ui-icon-delete ui-btn-icon-notext ui-shadow ui-corner-all"
+                role="button">Close</a>
+                <!-- 팝업 닫는 버튼 -->
+                <p>i have a close botton at the right corner</p>
+            </div>
+
+         </div>
+         <div data-role="footer">
+            <div>
+                <h3>hello</h3>
+            </div>
+         </div>
+     </div>
+
+
 </body>
 </html>
