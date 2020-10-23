@@ -9,7 +9,68 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
+    <div data-role="page" id="pageone">
+        <div data-role="header">
+            <h1>welcome to my page</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <a href="#pagetwo">goto page two<br></a>
+            <a href="#pagethree" data-transition="slide" data-direction="reverse" >goto page three<br></a> <!-- 반대로 가는 애니메이션 적용 -->
+            <a href="#pagefour" data-transition="pop">goto page four<br></a>
+        </div>
+        <div data-role="footer">
+            <h1>footer Text</h1>
+        </div>
+    </div>
+    <div data-role="page" data-dialog=true id="pagetwo">
+        <div data-role="header">
+
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>Im the dialog box page</p>
+            <a href="#pageone">goto page one</a>
+        </div>
+        <div data-role="footer">
+
+        </div>
+    </div>
+    <div data-role="page" id="pagethree">
+            <div data-role="header">
     
+            </div>
+            <div data-role="main" class="ui-content">
+                <p>Im the slide pagethree</p>
+                <a href="#pageone" data-transition="slide" >goto page one</a>
+                <input type="button" value="Button"><!--form양식에서 사용하라-->
+                <button class="ui-btn">Button</button><!--버튼을 만드는 3가지 방법-->
+                <a href="#" class="ui-btn">Button</a><!--jQuery에서 추천하는 방법은 page와 page간의 전환이 있을때 사용-->
+                <a href="#" class="ui-btn" data-rel="back">goto back</a>
+            </div>
+            <div data-role="footer">
+    
+            </div>
+    </div>
+    <div data-role="page" id="pagefour">
+            <div data-role="header">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <a href="#" class="ui-btn">1</a>
+                    <a href="#" class="ui-btn">2</a>
+                    <a href="#" class="ui-btn">3</a>
+                    <a href="#" class="ui-btn">4</a>
+                </div>
+            </div>
+            <div data-role="main" class="ui-content">
+                <p>Im the pop pagefour</p>
+                <a href="#pageone" data-transition="pop">goto page one</a>
+                <a href="#pagetwo" class="ui-btn">GO To Two</a>
+                <a href="#pagetwo" class="ui-btn ui-btn-inline ui-shadow">Go to Two</a><!--한라인에 여러 버튼-->
+                <a href="#pagethree" class="ui-btn ui-btn-inline ui-shadow ui-corner-all">Go to Three</a>
+            </div>
+            <div data-role="footer">
+    
+            </div>
+    </div>
 </body>
 </html>
