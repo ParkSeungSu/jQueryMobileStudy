@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>listView</title>
+
+</head>
+<body>
+    <div data-role="page" id="pageone">
+        <div data-role="header" >
+            <h2>Mobile form</h2>
+        </div>
+        <div data-role="main" class="ui-contents">
+           <form method="post" action="demoform.asp">
+               <!-- id 는 필수 -->
+               <label for="fname" class="ui-hidden-accessible">First Name</label>
+               <input type="text" name="fname" id="fname" data-clear-btn="true" placeholder="First Name...">
+               <input type="button" value="Button">
+               <input type="reset" value="Reset">
+               <input type="submit" value="submit" data-icon="check" data-iconpos="right" data-inline="true">
+           </form>
+
+           <form method="post" action="demoform.asp">
+            <!-- field containers -->
+                <div class="ui-field-contain">
+                    <label for="fname" class="">First Name</label>
+                    <input type="text" name="fname" id="fname" data-clear-btn="true" placeholder="First Name...">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" data-clear-btn="true" placeholder="Last Name...">
+                </div>
+            </form>
+            <!-- input form-->
+            <form method="post" action="demoform.asp">
+                
+                <div class="ui-field-contain">
+                    <label for="fname" class="">Full Name</label>
+                    <input type="text" name="fname" id="fname" data-clear-btn="true" placeholder="Full Name...">
+                    <label for="bday">Dates of Birth</label>
+                    <input type="date" name="bday" id="bday">
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email" data-clear-btn="true" placeholder="email">
+                    <input type="submit" data-inline="true" value="Submit">
+                </div>
+            </form>
+        </div>
+        <div data-role="footer" >
+             
+        </div>
+    </div>
+</body>
+</html>
