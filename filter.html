@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>listView</title>
+
+</head>
+<body>
+    <div data-role="page" id="pageone">
+        <div data-role="header" >
+            
+        </div>
+        <div data-role="main" class="ui-contents">
+            <form action="" class="ui-filterable">
+                <input id="myFilter" data-type="search">
+            </form>
+            <ul data-role="listview" data-inset="true" data-filter="true" data-input="#myFilter">
+                <li data-filtertext="fav"><a href="#">Adele</a></li>
+                <li><a href="#">Billy</a></li>
+                <li><a href="#">Calvin</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" >
+             
+        </div>
+    </div>
+</body>
+</html>
