@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>page Event</title>
+   <script>
+     
+       $(document).on("pagebeforecreate",function(event){
+        alert("pagebeforecreate event field")
+       });
+        
+       $(document).on("pagecreate",function(event){
+        alert("pagecreate event field")
+       });
+        
+       $(document).on("pagecontainerload",function(event,data){
+        alert("page load event fired:\nURL:"+data.url);
+       });
+       $(document).on("pagecontainerloadfaild",function(event,data){
+        alert("Sorry, requested page does not exist");
+       });
+      
+      
+
+   </script>
+</head>
+<body>
+    <div data-role="page"  id="pageone">
+        <div data-role="header" >
+            <h2>Page Event</h2>
+        </div>
+        <div data-role="main" class="ui-contents ">
+            <a href="popup.html" rel="external" >go external</a>
+            <!-- 외부 html page로 이동 -->
+            <br><br>
+            <a href="notexternal.html">not external</a>
+        </div>
+        <div data-role="footer">
+             <h3>Event Footer</h3>
+        </div>
+    </div>
+</body>
+</html>
+
