@@ -8,17 +8,31 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>Themes</title>
-
+    <style>
+        .ui-bar-f{
+            color: white;
+            background-color: saddlebrown;
+        }
+        .ui-body-f{
+            font-weight: bold;
+            color: white;
+            background-color: chocolate;
+        }
+        .ui-page-theme-f{
+            font-weight: bold;
+            background-color: darkgoldenrod;
+        }
+    </style>
 </head>
 <body>
-    <div data-role="page" data-theme="b" id="pageone">
-        <div data-role="header" data-theme="a" >
+    <div data-role="page" data-theme="f" id="pageone">
+        <div data-role="header" data-theme="f" >
             <h2>Themes</h2>
         </div>
-        <div data-role="main" class="ui-contents" data-theme="b">
+        <div data-role="main" class="ui-contents ui-body-f" data-theme="b">
             <a href="#" class="ui-btn ui-btn-a"></a>
         </div>
-        <div data-role="footer" data-theme="a">
+        <div data-role="footer" data-theme="f">
              <h3>Footer</h3>
         </div>
     </div>
