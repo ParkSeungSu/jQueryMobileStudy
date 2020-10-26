@@ -8,29 +8,70 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>projectMocha</title>
- 
+    <script>
+        $(function(){
+            $("#Home").click(function(){
+                $("#insideContent").text("Hello!  Good day isn't it?")
+            });
+            $("#About").click(function(){
+                $("#insideContent").text("Hello! Im Mocha")
+            });
+            $("#Search").click(function(){
+                $("#insideContent").text("you can find cafe that you want")
+            });
+            $("#Contact").click(function(){
+                $("#insideContent").text("Come to my facebook!")
+            });
+        });
+        
+    </script>
 </head>
 <body>
-    <div data-role="page"  id="pageone">
+    <div data-role="page" style="background-color: #F2F2F2;" id="pageone">
         <div data-role="panel" id="mypanel" data-display="overlay" data-position-fixed="true">
-            <h2>Panel header</h2>
-            <p>Some text</p>
-                   <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Facebook</a>
-                   <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Instagram</a>
-                   <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Twitter</a>
+            <h2>Oh Hi</h2>
+            <p>What do you want?</p>
+                   <a href="https://www.facebook.com/projectmocha/" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Facebook</a>
+                   <a href="https://www.instagram.com/project_mocha/" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Instagram</a>
+                   <a href="https://www.youtube.com/channel/UC-3ErGuzNkIquIHJddNYxMw" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Youtube</a>
         </div>
         <div data-role="header" >
             <a href="#mypanel" 
                 data-role="button"
                 data-icon="plus"
                 data-iconpos="notext">OpenPanel</a>
-            <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-notext">search</a>
-            <h2>Scroll Event</h2>
+            <a href="#mypopup" data-rel="popup" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-notext">search</a>
+            
+            <h2>Project Mocha</h2>
         </div>
         <div data-role="main" class="ui-contents ">
-          
+            <div data-role="navbar">
+                <ul>
+                    <li><a id="Home" href="#" data-icon="home" class="">Home</a></li>
+                    <li><a id="About" href="#" data-icon="info">About</a></li>
+                    <li><a id="Search" href="#" data-icon="search">Search</a></li>
+                    <li><a id="Contact" href="#" data-icon="phone">Contact</a></li>
+                    <!-- 5개까지는 비율을 자동으로 나눠줌-->
+                </ul>
+            </div> 
+            <div id="inside" style="background-color: #F2F2F2; color: #260801; text-align: center;">
+                <h1 id="insideContent">Hello this is project mocha nice to meet you!</h1>
+        
+            </div>
+           
+            <div data-role="popup" id="mypopup" class="ui-contents">
+                <!-- <a href="#" data-rel="back" 
+                data-role="button"
+                data-theme="a" 
+                data-icon="delete"
+                data-iconpos="notext"
+                class="ui-btn-right ui-link ui-btn ui-btn-a ui-icon-delete ui-btn-icon-notext ui-shadow ui-corner-all"
+                role="button">Close</a> -->
+                <!-- 팝업 닫는 버튼 -->
+                <input type="search">
+            </div>
         </div>
-        <div data-role="footer">
+        <div data-role="footer" data-position="fixed"> 
              <h3>Event Footer</h3>
         </div>
     </div>
